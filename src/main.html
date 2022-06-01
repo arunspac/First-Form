@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+   
+    <title>Document</title>
+</head>
+<body>
+    <button class="open-button" type="button" onclick="openForm()">Click Me!</button>
+    <div class="form-popup" id="myForm">
+        <div class="formpop-header">
+            <div class="row header-row">
+                <div class="col-sm" id="changer-header">
+                    <button class="popheader-button" type="button">Personal</button>
+                </div>
+                <div class="col-sm" id="changer-header">
+                    <button class="popheader-button" type="button">Education</button>
+                </div>
+                <div class="col-sm" id="changer-header">
+                    <button class="popheader-button" type="button">Profile</button>
+                </div>
+            </div>
+        </div>
+        <form action="" class="form-container">
+            <div class="tab">
+                <div class="inner-details">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="firstname" class="form-details"><b>First Name</b></label>
+                            <input class="wid50" type="text" placeholder="First Name" name="firstname" required>                    
+                        </div>
+                        <div class="col-sm">
+                            <label for="lastname" class="form-details"><b>Last Name</b></label>
+                            <input class="wid50" type="text" placeholder="Last Name" name="lastname" required><br>                   
+                         </div>
+                         <div class="col-sm">
+                            <label for="birthdate" class="form-details" ><b>Birth Date</b></label>
+                            <input type="date" placeholder="Last Name" name="birthdate" required> <br>       
+                            <label for="favcolor" class="form-details" ><b>Fav Color</b></label>
+                            <input style="margin-top: 10px;" type="color" id="favcolor" name="favcolor" value="#ff0000">        
+                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <label for="address" class="form-details"><b>Address</b></label><br>
+                            <label for="AddressLine1" class="form-details">Line 1</label>
+                            <input type="text" placeholder="lineone" name="doorno" required><br>
+                            <label for="AddressLine2" class="form-details">Line 2</label>
+                            <input type="text" placeholder="linetwo" name="address" required><br>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="country" class="form-details"><b>Country</b></label><br>
+                                    <select name="countries" id="country" onchange="changeCountry()" required>
+                                    </select>
+                                </div>
+                                <div  class="col">
+                                    <label for="state" class="form-details"><b>State</b></label><br>
+                                    <select name="states" id="state"  onchange="changeState()" required disabled>
+                                    </select><br>
+                                </div>
+                                <div class="col">
+                                    <label for="city" class="form-details"><b>City</b></label><br>
+                                    <select name="cities" id="city" required disabled>
+                                    </select><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label for="gender" class="form-details"><b>Gender</b></label><br>
+                                    <label class="form-details">
+                                        <input type="radio" name="gender" value="male" required>
+                                        Male
+                                    </label><br>
+                    
+                                    <label class="form-details">
+                                        <input type="radio" name="gender" value="female">
+                                        Female
+                                    </label><br>
+                    
+                                    <label class="form-details">
+                                        <input type="radio" name="gender" value="other">
+                                        Other
+                                    </label>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="favsport" class="form-details"><b>Fav Sport</b></label><br>
+                                    <input type="checkbox" id="sport1" name="sport1" value="Football">
+                                    <label for="vehicle1" class="form-details"> I have a bike</label><br>
+                                    <input type="checkbox" id="sport2" name="sport2" value="Cricket">
+                                    <label for="vehicle2" class="form-details"> I have a car</label><br>
+                                    <input type="checkbox" id="sport3" name="sport3" value="Basketball">
+                                    <label for="vehicle3" class="form-details"> I have a boat</label><br><br>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="inner-details">
+                    <div class="edu-details">
+                        <div id="edu-holder">
+                            <!-- <div class="single-edu" id="edu">
+                                <div class="dot" onclick="closeSingle(this)">
+                                    <p>x</p>
+                                </div>
+                                <div class="header">Education - </div>
+                                <div class="row">
+                                    <div class="col-md-8 mt-2">
+                                        <label for="eduname" class="form-details"><b>Name (College/ Institute/ School)</b></label>
+                                        <input class="eduname" type="text" placeholder="College/ Institute/ School" name="eduname" required>    
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <label for="eduplace" class="form-details"><b>Place</b></label>
+                                        <input class="eduplace" type="text" placeholder="Place" name="eduplace" required>    
+                                    </div>
+                                    </div><div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <label for="eduqualification" class="form-details"><b>Qualification</b></label>
+                                            <input class="eduqualification" type="text" placeholder="Qualification" name="eduname" required>    
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <label for="eduspecialization" class="form-details"><b>Specialization</b></label>
+                                            <input class="eduspecialization" type="text" placeholder="Specialization" name="eduplace" required>    
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <label for="eduyear" class="form-details"><b>Year of Completion</b></label>
+                                            <input class="eduyear" type="text" placeholder="Place" name="eduplace" required>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <button type="button" onclick="cloningNew()" style="float: right; margin-right: 2%; background: red; color: white; border-radius: 10px; border: none;">
+                            + Another
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="inner-details">
+                    
+                </div>
+            </div>
+            <div class="submit-holder">
+                <div class="buttons-last ">
+                    <div class="row">
+                        <div class="col-md-8" style="padding-left: 5%;">
+                            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                        </div>
+                        <div class="col-md-4" style="padding-left: 100px;">
+                            <button type="button" class="btn" id="prevBtn" style="width: 40%;;" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" class="btn" id="nextBtn" style="width: 40%;" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+</body>
+<head>
+    <script src="actions.js"></script>
+</head>
+</html>

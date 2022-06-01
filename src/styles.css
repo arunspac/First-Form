@@ -1,0 +1,181 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.tab{
+    display: none;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+select{
+    width: 100%;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 15%;
+  bottom: 12;
+  right: 15%;
+  left: 15%;
+  border: 3px solid #f0f0f5;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9;
+}
+
+.header-row{
+    border-radius: 5px;
+    text-align: center;
+    background-color: #4d94ff
+    ;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+/* The popup form header section */
+.formpop-header{
+    display: block;
+    border-radius: 15px;
+    background-color: darkcyan;
+    left: 2%;
+    right: 2%;
+    top: 2%;
+    height: 40px;
+    width: 100%;
+}
+
+.form-details{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.popheader-button{
+    width: 100%;
+    background-color: Transparent;
+    height: 100%;
+    color: white;
+    border: none;
+}
+
+.inner-details{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #4d94ff;
+}
+
+#changer-header{
+    color: white;
+    font-size: larger;
+}
+/* Add styles to the form container */
+.form-container {
+  padding: 0;
+  background: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]{
+    background-color: transparent;
+    border-bottom: 1px solid #4d94ff;
+}
+
+.form-container input[type=text]:focus {
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  border-color: #555;
+  background-color:  white;
+  color: #555;
+  padding: 10px 13px;
+  cursor: pointer;
+  margin-bottom:10px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: transparent;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  background-color: #4d94ff;
+  border: none;
+  color: white;
+}
+
+.form-container .col-sm .wid50{
+    width: auto;
+}
+
+.edu-details{
+    display: block;
+    height: 350px;
+    overflow: scroll;
+}
+
+.single-edu {
+    border: solid #dddde3;
+    border-radius: 5px;
+    padding: 15px 10px 10px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    padding-top: 3%;
+    margin-top: 1%;
+  }
+  
+.dot{
+    height: 20px;
+    float: right;
+    width: 20px;
+    padding-bottom: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin-top: -45px;
+    margin-right: -20px;
+    cursor: pointer;
+    display: none;
+}
+
+.dot:hover{
+    background-color: red;
+    color: white;
+}
+
+  .single-edu .header {
+    position: relative;
+    width: fit-content;
+    margin-top:-45px;
+    margin-left:10px;
+    color: white;
+    background: #4d94ff;
+    border-radius:10px;
+    padding:2px 10px;
+  }
